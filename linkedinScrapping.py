@@ -41,7 +41,7 @@ def scrape_connection_data(driver, quantity):
                 try:
                     # Wait for the name element to appear
                     name = WebDriverWait(driver, 15).until(
-                        EC.presence_of_element_located((By.XPATH, "//h1[contains(@class, 'text-heading-xlarge')]"))
+                        EC.presence_of_element_located((By.XPATH, "//<tag>[contains(@class, '<class>')]"))
                     ).text
                 except TimeoutException:
                     name = "Name not found"
